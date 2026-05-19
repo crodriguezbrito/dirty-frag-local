@@ -13,7 +13,7 @@ echo "==============================================="
 CURRENT_HOST=$(hostname)
 echo "Iniciando dirty frag en: $CURRENT_HOST" 
 
-if lsmod | grep -E "esp4|esp6|rxrpc" >/dev/null; then
+if [ -f /etc/modprobe.d/dirty-frag.conf ]; then
 
     CONF_FILE="/etc/modprobe.d/dirty-frag.conf"
 
