@@ -13,7 +13,7 @@ echo "==============================================="
 CURRENT_HOST=$(hostname)
 echo "Iniciando dirty frag en: $CURRENT_HOST" 
 
-if [ -f /etc/modprobe.d/dirty-frag.conf ]; then
+if [ ! -f /etc/modprobe.d/dirty-frag.conf ]; then
 
     CONF_FILE="/etc/modprobe.d/dirty-frag.conf"
 
